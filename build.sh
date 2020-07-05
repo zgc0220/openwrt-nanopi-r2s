@@ -26,6 +26,11 @@ svn co https://github.com/project-openwrt/openwrt/trunk/package/ctcgfw/filebrows
 svn co https://github.com/project-openwrt/openwrt/trunk/package/ctcgfw/luci-app-filebrowser lean/luci-app-filebrowser
 popd
 
+# install luci for 0.91 oled
+pushd lede/package
+git clone --depth 1 -b master https://github.com/NateLol/luci-app-oled.git lean/luci-app-oled
+popd
+
 # install packages
 pushd lede
 ./scripts/feeds update -a

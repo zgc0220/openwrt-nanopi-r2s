@@ -64,6 +64,9 @@ jobs:
           svn co https://github.com/project-openwrt/openwrt/trunk/package/ctcgfw/filebrowser lean/filebrowser
           svn co https://github.com/project-openwrt/openwrt/trunk/package/ctcgfw/luci-app-filebrowser lean/luci-app-filebrowser
 
+          # install luci for 0.91 oled
+          git clone --depth 1 -b master https://github.com/NateLol/luci-app-oled.git lean/luci-app-oled
+
       - name: Install Feeds
         run: |
           cd lede
