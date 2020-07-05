@@ -72,7 +72,7 @@ jobs:
           cd lede
           ./scripts/feeds update -a
           cd feeds
-          cd luci && git am ../patches/luci/*.patch
+          cd luci && git am ../../../patches/luci/*.patch
 
       - name: Install Feeds
         run: |

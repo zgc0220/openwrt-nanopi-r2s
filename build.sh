@@ -35,7 +35,7 @@ popd
 pushd lede
 ./scripts/feeds update -a
 pushd feeds/luci
-git am ../patches/luci/*.patch
+git am ../../../patches/luci/*.patch
 popd
 popd
 
