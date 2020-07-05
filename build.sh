@@ -31,9 +31,16 @@ pushd lede/package
 git clone --depth 1 -b master https://github.com/NateLol/luci-app-oled.git lean/luci-app-oled
 popd
 
-# install packages
+# initialize feeds
 pushd lede
 ./scripts/feeds update -a
+pushd feeds/luci
+git am ../patches/luci/*.patch
+popd
+popd
+
+#install packages
+pushd lede
 ./scripts/feeds install -a
 popd
 

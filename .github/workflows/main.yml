@@ -67,10 +67,16 @@ jobs:
           # install luci for 0.91 oled
           git clone --depth 1 -b master https://github.com/NateLol/luci-app-oled.git lean/luci-app-oled
 
-      - name: Install Feeds
+      - name: Initialize Feeds
         run: |
           cd lede
           ./scripts/feeds update -a
+          cd feeds
+          cd luci && git am ../patches/luci/*.patch
+
+      - name: Install Feeds
+        run: |
+          cd lede
           ./scripts/feeds install -a
 
       - name: Customize Config
