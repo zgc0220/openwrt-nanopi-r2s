@@ -1,7 +1,7 @@
 From 4d5d94c561eba1beb958ba0d263fcf5bd6085e8f Mon Sep 17 00:00:00 2001
 From: Chuck <fanck0605@qq.com>
 Date: Sat, 4 Jul 2020 16:15:14 +0800
-Subject: [PATCH 6/6] feeds: unlock hell0world
+Subject: [PATCH 6/7] feeds: unlock hell0world
 
 ---
  feeds.conf.default | 2 +-

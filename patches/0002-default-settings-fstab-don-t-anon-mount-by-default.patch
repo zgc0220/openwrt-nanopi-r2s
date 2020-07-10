@@ -1,7 +1,7 @@
 From b42d00e56916ced5ab2dc6a22d8898b72f3f1c95 Mon Sep 17 00:00:00 2001
 From: Chuck <fanck0605@qq.com>
 Date: Mon, 4 May 2020 19:38:43 +0800
-Subject: [PATCH 2/6] default-settings: fstab: don't anon mount by default
+Subject: [PATCH 2/7] default-settings: fstab: don't anon mount by default
 
 ---
  package/lean/default-settings/files/zzz-default-settings | 3 ---

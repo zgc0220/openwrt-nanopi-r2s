@@ -1,7 +1,7 @@
 From a2061e4130e40e41144c1cd978c3203558744e36 Mon Sep 17 00:00:00 2001
 From: Chuck <fanck0605@qq.com>
 Date: Mon, 4 May 2020 19:43:22 +0800
-Subject: [PATCH 3/6] samba36: use root account by default
+Subject: [PATCH 3/7] samba36: use root account by default
 
 ---
  package/network/services/samba36/files/smb.conf.template | 3 ++-
