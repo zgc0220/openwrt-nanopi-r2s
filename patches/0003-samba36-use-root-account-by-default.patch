@@ -1,4 +1,4 @@
-From c85edcb17d2838147f085327008fa3844f9b0d5d Mon Sep 17 00:00:00 2001
+From a2061e4130e40e41144c1cd978c3203558744e36 Mon Sep 17 00:00:00 2001
 From: Chuck <fanck0605@qq.com>
 Date: Mon, 4 May 2020 19:43:22 +0800
 Subject: [PATCH 3/6] samba36: use root account by default

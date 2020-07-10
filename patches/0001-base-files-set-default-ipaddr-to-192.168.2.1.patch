@@ -1,4 +1,4 @@
-From 8ab512c96d09c582f9987b9edcc0d6ef95ca59d6 Mon Sep 17 00:00:00 2001
+From 6b35c1307a3e055c3a1957c3c29fd6df59a9a11a Mon Sep 17 00:00:00 2001
 From: Chuck <fanck0605@qq.com>
 Date: Sat, 4 Jul 2020 12:07:43 +0800
 Subject: [PATCH 1/6] base-files: set default ipaddr to 192.168.2.1

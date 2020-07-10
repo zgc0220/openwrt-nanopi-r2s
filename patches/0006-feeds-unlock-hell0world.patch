@@ -1,4 +1,4 @@
-From 286891844b25f5f72bdab04d15d1842f793023d7 Mon Sep 17 00:00:00 2001
+From 4d5d94c561eba1beb958ba0d263fcf5bd6085e8f Mon Sep 17 00:00:00 2001
 From: Chuck <fanck0605@qq.com>
 Date: Sat, 4 Jul 2020 16:15:14 +0800
 Subject: [PATCH 6/6] feeds: unlock hell0world
@@ -8,7 +8,7 @@ Subject: [PATCH 6/6] feeds: unlock hell0world
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/feeds.conf.default b/feeds.conf.default
-index b63d8f2f1..a9c453a43 100644
+index bae9813cf..1be7d70a5 100644
 --- a/feeds.conf.default
 +++ b/feeds.conf.default
 @@ -8,4 +8,4 @@ src-git freifunk https://github.com/freifunk/openwrt-packages.git
