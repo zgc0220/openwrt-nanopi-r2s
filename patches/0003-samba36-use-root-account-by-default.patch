@@ -1,14 +1,14 @@
-From a2061e4130e40e41144c1cd978c3203558744e36 Mon Sep 17 00:00:00 2001
+From 7af387ece58dda4ed11f355d26669e11acb57805 Mon Sep 17 00:00:00 2001
 From: Chuck <fanck0605@qq.com>
 Date: Mon, 4 May 2020 19:43:22 +0800
-Subject: [PATCH 3/7] samba36: use root account by default
+Subject: [PATCH] samba36: use root account by default
 
 ---
  package/network/services/samba36/files/smb.conf.template | 3 ++-
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/package/network/services/samba36/files/smb.conf.template b/package/network/services/samba36/files/smb.conf.template
-index fb82732d9..7e6fab751 100644
+index fb82732d93..7e6fab7518 100644
 --- a/package/network/services/samba36/files/smb.conf.template
 +++ b/package/network/services/samba36/files/smb.conf.template
 @@ -8,7 +8,8 @@

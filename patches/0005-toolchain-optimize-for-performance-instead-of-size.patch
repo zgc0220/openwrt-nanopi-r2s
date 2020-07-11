@@ -1,14 +1,14 @@
-From 52dba6091c9f6f453e6fc2b5653f3b8e02b02304 Mon Sep 17 00:00:00 2001
+From 462e372a21b3063d2924d06bc428f6013f34e269 Mon Sep 17 00:00:00 2001
 From: Chuck <fanck0605@qq.com>
 Date: Fri, 8 May 2020 17:39:43 +0800
-Subject: [PATCH 5/7] toolchain: optimize for performance instead of size
+Subject: [PATCH] toolchain: optimize for performance instead of size
 
 ---
  include/target.mk | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/include/target.mk b/include/target.mk
-index be8075ec4..4b64de7a2 100644
+index be8075ec4e..4b64de7a27 100644
 --- a/include/target.mk
 +++ b/include/target.mk
 @@ -165,7 +165,7 @@ LINUX_RECONF_DIFF = $(call __linux_confcmd,$(filter-out $(LINUX_RECONFIG_TARGET)
