@@ -11,7 +11,7 @@ git clone -b master https://github.com/coolsnowwolf/lede.git
 
 # customize patches
 pushd lede
-git am ../patches/*.patch
+git am -3 ../patches/*.patch
 popd
 
 # upgrade argon theme
@@ -32,10 +32,17 @@ git clone --depth 1 -b master https://github.com/NateLol/luci-app-oled.git lean/
 popd
 
 # initialize feeds
+p_list=$(ls -l patches | grep ^d | awk '{print $NF}')
 pushd lede
 ./scripts/feeds update -a
-pushd feeds/luci
-git am ../../../patches/luci/*.patch
+pushd feeds
+for p in $p_list ; do
+  [ -d $p ] && {
+    pushd $p
+    git am -3 ../../../patches/$p/*.patch
+    popd
+  }
+done
 popd
 popd
 
