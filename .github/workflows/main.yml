@@ -50,7 +50,7 @@ jobs:
       - name: Initialize Source
         run: |
           git clone -b master https://github.com/coolsnowwolf/lede.git
-          cd lede && git am ../patches/*.patch
+          cd lede && git am -3 ../patches/*.patch
 
       - name: Install Extra Packages
         run: |
@@ -69,10 +69,18 @@ jobs:
 
       - name: Initialize Feeds
         run: |
+          wk_dir=$(pwd)
+          p_list=$(ls -l patches | grep ^d | awk '{print $NF}')
           cd lede
           ./scripts/feeds update -a
           cd feeds
-          cd luci && git am ../../../patches/luci/*.patch
+          for p in $p_list ; do
+            [ -d $p ] && {
+              cd $p
+              git am -3 $wk_dir/patches/$p/*.patch
+              cd ..
+            }
+          done
 
       - name: Install Feeds
         run: |
