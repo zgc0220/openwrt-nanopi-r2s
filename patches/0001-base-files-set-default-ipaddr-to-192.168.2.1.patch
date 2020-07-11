@@ -1,4 +1,4 @@
-From 6b35c1307a3e055c3a1957c3c29fd6df59a9a11a Mon Sep 17 00:00:00 2001
+From 1790867ea9d01fbfd23e70526d79ac05ee23e152 Mon Sep 17 00:00:00 2001
 From: Chuck <fanck0605@qq.com>
 Date: Sat, 4 Jul 2020 12:07:43 +0800
 Subject: [PATCH] base-files: set default ipaddr to 192.168.2.1
@@ -9,7 +9,7 @@ Signed-off-by: Chuck <fanck0605@qq.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/package/base-files/files/bin/config_generate b/package/base-files/files/bin/config_generate
-index abb1388ba1..79e12bd3ff 100755
+index abb1388ba..79e12bd3f 100755
 --- a/package/base-files/files/bin/config_generate
 +++ b/package/base-files/files/bin/config_generate
 @@ -100,7 +100,7 @@ generate_network() {

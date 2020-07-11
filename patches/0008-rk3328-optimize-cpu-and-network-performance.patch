@@ -1,4 +1,4 @@
-From 387637c485b355b3d61e7c5898888d61f1b6aca6 Mon Sep 17 00:00:00 2001
+From e3581583aa06bd24890ff6526b299af070c31ec5 Mon Sep 17 00:00:00 2001
 From: Chuck <fanck0605@qq.com>
 Date: Sat, 11 Jul 2020 13:30:15 +0800
 Subject: [PATCH] rk3328: optimize cpu and network performance
@@ -11,7 +11,7 @@ Signed-off-by: Chuck <fanck0605@qq.com>
 
 diff --git a/target/linux/rockchip/armv8/base-files/etc/init.d/fa-rk3328-misc b/target/linux/rockchip/armv8/base-files/etc/init.d/fa-rk3328-misc
 new file mode 100755
-index 0000000000..bd4a09cb40
+index 000000000..bdc8eea7d
 --- /dev/null
 +++ b/target/linux/rockchip/armv8/base-files/etc/init.d/fa-rk3328-misc
 @@ -0,0 +1,11 @@
@@ -20,8 +20,8 @@ index 0000000000..bd4a09cb40
 +START=96
 +
 +start() {
-+	[ -f /proc/irq/166/smp_affinity ] && echo 2 >/proc/irq/166/smp_affinity
-+	[ -f /proc/irq/27/smp_affinity ] && echo 4 >/proc/irq/27/smp_affinity
++	[ -f /proc/irq/13/smp_affinity ] && echo 2 >/proc/irq/13/smp_affinity
++	[ -f /proc/irq/166/smp_affinity ] && echo 4 >/proc/irq/166/smp_affinity
 +	[ -f /proc/irq/28/smp_affinity ] && echo 8 >/proc/irq/28/smp_affinity
 +	echo performance >/sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 +}

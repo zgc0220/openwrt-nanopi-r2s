@@ -1,4 +1,4 @@
-From 80d6b0c9477a3202e143f24a45aa63fad75e5de2 Mon Sep 17 00:00:00 2001
+From fd3dc51fc9201bbf68bd70f787ffc8a0968e9b55 Mon Sep 17 00:00:00 2001
 From: Chuck <fanck0605@qq.com>
 Date: Sat, 11 Jul 2020 13:29:04 +0800
 Subject: [PATCH] feeds: enable hell0world by default
@@ -9,7 +9,7 @@ Signed-off-by: Chuck <fanck0605@qq.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/feeds.conf.default b/feeds.conf.default
-index bae9813cfd..1be7d70a52 100644
+index bae9813cf..1be7d70a5 100644
 --- a/feeds.conf.default
 +++ b/feeds.conf.default
 @@ -8,4 +8,4 @@ src-git freifunk https://github.com/freifunk/openwrt-packages.git
