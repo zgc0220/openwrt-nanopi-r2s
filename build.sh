@@ -609,9 +609,9 @@ rm -rf smartdns
 rm -rf lean/luci-app-cpufreq
 svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/luci-app-cpufreq lean/luci-app-cpufreq
 sed -i "s/..\/..\/luci.mk/\$(TOPDIR)\/feeds\/luci\/luci.mk/g" lean/luci-app-cpufreq/Makefile
-sed -i "s/option governor ''/option governor 'schedutil'/g" lean/luci-app-cpufreq/root/etc/config/cpufreq
-sed -i "s/option minfreq ''/option minfreq '816000'/g" lean/luci-app-cpufreq/root/etc/config/cpufreq
-sed -i "s/option maxfreq ''/option maxfreq '1608000'/g" lean/luci-app-cpufreq/root/etc/config/cpufreq
+sed -i "s/option governor ''/option governor0 'schedutil'/g" lean/luci-app-cpufreq/root/etc/config/cpufreq
+sed -i "s/option minfreq ''/option minfreq0 '816000'/g" lean/luci-app-cpufreq/root/etc/config/cpufreq
+sed -i "s/option maxfreq ''/option maxfreq0 '1608000'/g" lean/luci-app-cpufreq/root/etc/config/cpufreq
 # zerotier
 svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/zerotier lean/zerotier
 popd
