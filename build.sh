@@ -665,9 +665,9 @@ rm -rf smartdns
 # luci-app-freq
 svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-cpufreq custom/luci-app-cpufreq
 sed -i 's#../../luci.mk#$(TOPDIR)/feeds/luci/luci.mk#g' custom/luci-app-cpufreq/Makefile
-sed -i "s/option governor ''/option governor 'schedutil'/g" custom/luci-app-cpufreq/root/etc/config/cpufreq
-sed -i "s/option minfreq ''/option minfreq '816000'/g" custom/luci-app-cpufreq/root/etc/config/cpufreq
-sed -i "s/option maxfreq ''/option maxfreq '1512000'/g" custom/luci-app-cpufreq/root/etc/config/cpufreq
+sed -i "s/option governor ''/option governor0 'schedutil'/g" custom/luci-app-cpufreq/root/etc/config/cpufreq
+sed -i "s/option minfreq ''/option minfreq0 '816000'/g" custom/luci-app-cpufreq/root/etc/config/cpufreq
+sed -i "s/option maxfreq ''/option maxfreq0 '1512000'/g" custom/luci-app-cpufreq/root/etc/config/cpufreq
 # luci-app-zerotier
 svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/zerotier custom/zerotier
 svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-zerotier custom/luci-app-zerotier
