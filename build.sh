@@ -39,7 +39,7 @@ sed -i "s/..\/..\/lang\/golang\/golang-package.mk/\$(TOPDIR)\/feeds\/packages\/l
 git clone --depth 1 https://github.com/NateLol/luci-app-oled.git lean/luci-app-oled
 sed -i "s/option enable '0'/option enable '1'/g" lean/luci-app-oled/root/etc/config/oled
 # luci-app-openclash
-git clone --depth 1 -b master https://github.com/vernesong/OpenClash.git
+git clone --depth 1 -b dev https://github.com/vernesong/OpenClash.git
 CPU_MODEL=armv8
 mv OpenClash/luci-app-openclash lean
 echo '
