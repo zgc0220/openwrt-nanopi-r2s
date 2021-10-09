@@ -5,19 +5,19 @@ Subject: [PATCH] base-files: add author info to cli banner
 
 Signed-off-by: Chuck <fanck0605@qq.com>
 ---
- package/base-files/files/etc/banner | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ package/base-files/files/etc/banner | 1 +
+ 1 file changed, 1 insertion(+)
 
 diff --git a/package/base-files/files/etc/banner b/package/base-files/files/etc/banner
-index 94cbb4d13..6e32a32d5 100644
+index 94cbb4d13..f7f8ad956 100644
 --- a/package/base-files/files/etc/banner
 +++ b/package/base-files/files/etc/banner
-@@ -7,4 +7,4 @@
+@@ -7,4 +7,5 @@
    \    LE  \    /  -------------------------------------------
     \  DE    \  /    %D %V, %C
      \________\/    -------------------------------------------
--
 +     Powered By Lean's OpenWrt, Modified By Chuck
+
 --
 2.30.1
 
