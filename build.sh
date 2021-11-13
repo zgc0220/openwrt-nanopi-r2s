@@ -616,6 +616,9 @@ sed -i "s/option minfreq ''/option minfreq0 '816000'/g" lean/luci-app-cpufreq/ro
 sed -i "s/option maxfreq ''/option maxfreq0 '1608000'/g" lean/luci-app-cpufreq/root/etc/config/cpufreq
 # zerotier
 svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/zerotier lean/zerotier
+# luci-app-adguardhome
+svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/luci-app-adguardhome lean/luci-app-adguardhome
+svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/adguardhome lean/adguardhome
 popd
 
 # initialize feeds
