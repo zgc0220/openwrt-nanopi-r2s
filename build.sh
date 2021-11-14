@@ -618,7 +618,9 @@ sed -i "s/option maxfreq ''/option maxfreq0 '1608000'/g" lean/luci-app-cpufreq/r
 svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/zerotier lean/zerotier
 # luci-app-adguardhome
 svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/luci-app-adguardhome lean/luci-app-adguardhome
+sed -i "s/..\/..\/luci.mk/\$(TOPDIR)\/feeds\/luci\/luci.mk/g" lean/luci-app-adguardhome/Makefile
 svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/adguardhome lean/adguardhome
+sed -i "s/..\/..\/lang\/golang\/golang-package.mk/\$(TOPDIR)\/feeds\/packages\/lang\/golang\/golang-package.mk/g" lean/adguardhome/Makefile
 popd
 
 # initialize feeds
