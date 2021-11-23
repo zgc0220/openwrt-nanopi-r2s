@@ -621,6 +621,9 @@ svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/l
 sed -i "s/..\/..\/luci.mk/\$(TOPDIR)\/feeds\/luci\/luci.mk/g" lean/luci-app-adguardhome/Makefile
 svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/adguardhome lean/adguardhome
 sed -i "s/..\/..\/lang\/golang\/golang-package.mk/\$(TOPDIR)\/feeds\/packages\/lang\/golang\/golang-package.mk/g" lean/adguardhome/Makefile
+curl -L https://static.adguard.com/adguardhome/release/AdGuardHome_linux_${CPU_MODEL}.tar.gz | tar zxf -
+mv AdGuardHome/AdGuardHome base-files/files/usr/bin/AdGuardHome
+rm -rf AdGuardHome
 popd
 
 # initialize feeds
