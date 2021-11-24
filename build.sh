@@ -619,8 +619,8 @@ svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/zeroti
 # luci-app-adguardhome
 svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/luci-app-adguardhome lean/luci-app-adguardhome
 sed -i "s/..\/..\/luci.mk/\$(TOPDIR)\/feeds\/luci\/luci.mk/g" lean/luci-app-adguardhome/Makefile
-svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/adguardhome lean/adguardhome
-sed -i "s/..\/..\/lang\/golang\/golang-package.mk/\$(TOPDIR)\/feeds\/packages\/lang\/golang\/golang-package.mk/g" lean/adguardhome/Makefile
+#svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/adguardhome lean/adguardhome
+#sed -i "s/..\/..\/lang\/golang\/golang-package.mk/\$(TOPDIR)\/feeds\/packages\/lang\/golang\/golang-package.mk/g" lean/adguardhome/Makefile
 Arch="arm64"
 latest_ver="$(curl https://api.github.com/repos/AdguardTeam/AdGuardHome/releases/latest 2>/dev/null|grep -E 'tag_name' |grep -E 'v[0-9.]+' -o 2>/dev/null)"
 curl -L https://github.com/AdguardTeam/AdGuardHome/releases/download/${latest_ver}/AdGuardHome_linux_${Arch}.tar.gz | tar zxf -
