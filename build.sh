@@ -317,12 +317,12 @@ config dns_servers
   option type 'tcp'
 ' >lean/luci-app-openclash/root/etc/config/openclash
 mkdir -p base-files/files/etc/openclash/core
-curl -L https://github.com/vernesong/OpenClash/releases/download/TUN/clash-linux-${CPU_MODEL}.tar.gz | tar zxf -
-mv clash base-files/files/etc/openclash/core/clash_game
-chmod +x base-files/files/etc/openclash/core/clash_game
-curl -L https://github.com/vernesong/OpenClash/releases/download/Clash/clash-linux-${CPU_MODEL}.tar.gz | tar zxf -
-mv clash base-files/files/etc/openclash/core/clash
-chmod +x base-files/files/etc/openclash/core/clash
+#curl -L https://github.com/vernesong/OpenClash/releases/download/TUN/clash-linux-${CPU_MODEL}.tar.gz | tar zxf -
+#mv clash base-files/files/etc/openclash/core/clash_game
+#chmod +x base-files/files/etc/openclash/core/clash_game
+#curl -L https://github.com/vernesong/OpenClash/releases/download/Clash/clash-linux-${CPU_MODEL}.tar.gz | tar zxf -
+#mv clash base-files/files/etc/openclash/core/clash
+#chmod +x base-files/files/etc/openclash/core/clash
 OPENCLASH_TUN_VERSION=$(sed -n '2p' OpenClash/core_version)
 curl -OL https://github.com/vernesong/OpenClash/releases/download/TUN-Premium/clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION}.gz
 gzip -d clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION}.gz
