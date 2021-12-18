@@ -109,6 +109,7 @@ config openclash 'config'
 	option create_config '1'
 	option rule_sources 'ConnersHua'
 	option mix_proxies '0'
+	option dns_remote '1'
 	option enable '1'
 	option config_reload '1'
 
