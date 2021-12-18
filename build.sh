@@ -661,7 +661,9 @@ dns:
   ratelimit_whitelist: []
   refuse_any: false
   upstream_dns:
-  - 127.0.0.1:7874
+  - "#127.0.0.1:7874"
+  - 127.0.0.1:6053
+  - "#127.0.0.1:7053"
   upstream_dns_file: ""
   bootstrap_dns:
   - 119.29.29.29
