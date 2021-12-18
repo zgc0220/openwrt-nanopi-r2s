@@ -430,7 +430,7 @@ config server
   option server_group 'foreign'
   option blacklist_ip '0'
   option addition_arg '-exclude-default-group'
-  option enabled '0'
+  option enabled '1'
 
 config server
   option ip '8.8.4.4'
@@ -446,7 +446,7 @@ config server
   option server_group 'foreign'
   option blacklist_ip '0'
   option addition_arg '-exclude-default-group'
-  option enabled '0'
+  option enabled '1'
 
 config server
   option ip '1.0.0.1'
@@ -473,7 +473,7 @@ config server
   option addition_arg '-exclude-default-group'
 
 config server
-  option enabled '0'
+  option enabled '1'
   option ip '119.29.29.29'
   option type 'tcp'
 
@@ -483,7 +483,7 @@ config server
   option type 'tcp'
 
 config server
-  option enabled '0'
+  option enabled '1'
   option ip '223.5.5.5'
   option type 'tcp'
 
