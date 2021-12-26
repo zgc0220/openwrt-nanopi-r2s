@@ -337,9 +337,6 @@ config smartdns
   option prefetch_domain '1'
   option serve_expired '1'
   option redirect 'none'
-  option cache_size '20000'
-  option rr_ttl '3600'
-  option rr_ttl_min '5'
   option seconddns_port '7053'
   option seconddns_no_rule_addr '0'
   option seconddns_no_rule_nameserver '0'
@@ -637,7 +634,6 @@ auth_attempts: 5
 block_auth_min: 15
 http_proxy: ""
 language: ""
-rlimit_nofile: 0
 debug_pprof: false
 web_session_ttl: 720
 dns:
@@ -647,7 +643,7 @@ dns:
   statistics_interval: 1
   querylog_enabled: false
   querylog_file_enabled: true
-  querylog_interval: 1
+  querylog_interval: 24h
   querylog_size_memory: 1000
   anonymize_client_ip: false
   protection_enabled: true
@@ -670,15 +666,20 @@ dns:
   - 223.5.5.5
   all_servers: true
   fastest_addr: false
+  fastest_timeout: 1s
   allowed_clients: []
   disallowed_clients: []
   blocked_hosts:
   - version.bind
   - id.server
   - hostname.bind
-  cache_size: 4194304
+  trusted_proxies:
+  - 127.0.0.0/8
+  - ::1/128
+  cache_size: 0
   cache_ttl_min: 0
   cache_ttl_max: 0
+  cache_optimistic: true
   bogus_nxdomain: []
   aaaa_disabled: false
   enable_dnssec: false
@@ -696,8 +697,10 @@ dns:
   cache_time: 30
   rewrites: []
   blocked_services: []
+  upstream_timeout: 10s
   local_domain_name: lan
   resolve_clients: true
+  use_private_ptr_resolvers: true
   local_ptr_upstreams: []
 tls:
   enabled: false
@@ -777,7 +780,11 @@ log_max_size: 100
 log_max_age: 3
 log_file: ""
 verbose: false
-schema_version: 10
+os:
+  group: ""
+  user: ""
+  rlimit_nofile: 0
+schema_version: 12
 ' >base-files/files/etc/AdGuardHome.yaml
 popd
 
