@@ -39,7 +39,7 @@ sed -i "s/..\/..\/lang\/golang\/golang-package.mk/\$(TOPDIR)\/feeds\/packages\/l
 git clone --depth 1 https://github.com/NateLol/luci-app-oled.git lean/luci-app-oled
 sed -i "s/option enable '0'/option enable '1'/g" lean/luci-app-oled/root/etc/config/oled
 # luci-app-openclash
-git clone --depth 1 -b master https://github.com/vernesong/OpenClash.git
+git clone --depth 1 -b dev https://github.com/vernesong/OpenClash.git
 CPU_MODEL=armv8
 mv OpenClash/luci-app-openclash lean
 echo '
@@ -322,8 +322,8 @@ mkdir -p base-files/files/etc/openclash/core
 #mv clash base-files/files/etc/openclash/core/clash
 #chmod +x base-files/files/etc/openclash/core/clash
 OPENCLASH_TUN_VERSION=$(sed -n '2p' OpenClash/core_version)
-curl -OL https://github.com/vernesong/OpenClash/releases/download/TUN-Premium/clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION}.gz
-gzip -d clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION}.gz
+#curl -OL https://github.com/vernesong/OpenClash/releases/download/TUN-Premium/clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION}.gz
+gzip -d core-lateset/premium/clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION}.gz
 mv clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION} base-files/files/etc/openclash/core/clash_tun
 chmod +x base-files/files/etc/openclash/core/clash_tun
 rm -rf OpenClash
