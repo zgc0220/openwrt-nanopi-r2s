@@ -324,7 +324,7 @@ mkdir -p base-files/files/etc/openclash/core
 OPENCLASH_TUN_VERSION=$(sed -n '2p' OpenClash/core_version)
 #curl -OL https://github.com/vernesong/OpenClash/releases/download/TUN-Premium/clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION}.gz
 gzip -d OpenClash/core-lateset/premium/clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION}.gz
-mv clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION} base-files/files/etc/openclash/core/clash_tun
+mv OpenClash/core-lateset/premium/clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION} base-files/files/etc/openclash/core/clash_tun
 chmod +x base-files/files/etc/openclash/core/clash_tun
 rm -rf OpenClash
 # luci-app-smartdns
