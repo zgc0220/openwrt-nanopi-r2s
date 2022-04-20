@@ -37,7 +37,7 @@ jobs:
 
     - name: Load upstream commits
       run:  |
-        git remote add upstream https://github.com/fanck0605/openwrt-nanopi-r2s
+        git remote add upstream https://github.com/zgc/openwrt-nanopi-r2s
         git fetch upstream
         git rebase upstream/openwrt-lean
 
