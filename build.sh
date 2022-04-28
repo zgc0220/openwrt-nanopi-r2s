@@ -106,7 +106,7 @@ config openclash 'config'
 	option auto_restart_day_time '0'
 	option config_path '/etc/openclash/config/config.yaml'
 	option restricted_mode '0'
-	option core_type 'TUN'
+	option core_type 'Meta'
 	option create_config '1'
 	option rule_sources 'ConnersHua'
 	option mix_proxies '0'
@@ -117,6 +117,20 @@ config openclash 'config'
 	option dnsmasq_cachesize '0'
 	option cachesize_dns '1'
 	option filter_aaaa_dns '0'
+	option router_self_proxy '1'
+	option enable_meta_core '1'
+	option enable_meta_sniffer '1'
+	option enable_meta_sniffer_custom '0'
+	option geodata_loader 'standard'
+	option geosite_auto_update '1'
+	option geosite_update_week_time '*'
+	option geosite_update_day_time '6'
+	option geosite_custom_url 'https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat'
+	option enable_geoip_dat '1'
+	option geoip_auto_update '1'
+	option geoip_update_week_time '*'
+	option geoip_update_day_time '5'
+	option geoip_custom_url 'https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat'
 	option enable '1'
 	option config_reload '1'
 
@@ -329,9 +343,12 @@ mkdir -p base-files/files/etc/openclash/core
 #chmod +x base-files/files/etc/openclash/core/clash
 OPENCLASH_TUN_VERSION=$(sed -n '2p' OpenClash/core_version)
 #curl -OL https://github.com/vernesong/OpenClash/releases/download/TUN-Premium/clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION}.gz
-gzip -d OpenClash/core-lateset/premium/clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION}.gz
-mv OpenClash/core-lateset/premium/clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION} base-files/files/etc/openclash/core/clash_tun
-chmod +x base-files/files/etc/openclash/core/clash_tun
+#gzip -d OpenClash/core-lateset/premium/clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION}.gz
+#mv OpenClash/core-lateset/premium/clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION} base-files/files/etc/openclash/core/clash_tun
+#chmod +x base-files/files/etc/openclash/core/clash_tun
+tar zxf OpenClash/core-lateset/meta/clash-linux-${CPU_MODEL}.tar.gz
+mv OpenClash/core-lateset/meta/clash base-files/files/etc/openclash/core/clash_meta
+chmod +x base-files/files/etc/openclash/core/clash_meta
 rm -rf OpenClash
 # luci-app-smartdns
 git clone --depth 1 https://github.com/pymumu/smartdns.git smartdns
