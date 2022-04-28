@@ -347,7 +347,7 @@ OPENCLASH_TUN_VERSION=$(sed -n '2p' OpenClash/core_version)
 #mv OpenClash/core-lateset/premium/clash-linux-${CPU_MODEL}-${OPENCLASH_TUN_VERSION} base-files/files/etc/openclash/core/clash_tun
 #chmod +x base-files/files/etc/openclash/core/clash_tun
 tar zxf OpenClash/core-lateset/meta/clash-linux-${CPU_MODEL}.tar.gz
-mv OpenClash/core-lateset/meta/clash base-files/files/etc/openclash/core/clash_meta
+mv clash base-files/files/etc/openclash/core/clash_meta
 chmod +x base-files/files/etc/openclash/core/clash_meta
 rm -rf OpenClash
 # luci-app-smartdns
