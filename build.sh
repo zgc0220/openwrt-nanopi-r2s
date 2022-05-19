@@ -774,7 +774,7 @@ filters:
   name: anti-AD
   id: 1577113202
 - enabled: true
-  url: https://gitee.com/halflife/list/raw/master/ad.txt
+  url: https://raw.githubusercontent.com/o0HalfLife0o/list/master/ad.txt
   name: halflife
   id: 1636875676
 - enabled: false
