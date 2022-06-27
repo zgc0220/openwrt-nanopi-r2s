@@ -1,0 +1,25 @@
+From 01463883219cc08a1a2e95a07ae3b13f9026d9a9 Mon Sep 17 00:00:00 2001
+From: Guocheng Zheng <121431418@qq.com>
+Date: Mon, 27 Jun 2022 19:32:13 +0800
+Subject: [PATCH] close eth0 offloading rx/rx
+
+---
+ .../armv8/base-files/etc/hotplug.d/net/40-net-smp-affinity      | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/target/linux/rockchip/armv8/base-files/etc/hotplug.d/net/40-net-smp-affinity b/target/linux/rockchip/armv8/base-files/etc/hotplug.d/net/40-net-smp-affinity
+index 2822e4890..0e5326494 100644
+--- a/target/linux/rockchip/armv8/base-files/etc/hotplug.d/net/40-net-smp-affinity
++++ b/target/linux/rockchip/armv8/base-files/etc/hotplug.d/net/40-net-smp-affinity
+@@ -35,6 +35,8 @@ xunlong,orangepi-r1-plus|\
+ xunlong,orangepi-r1-plus-lts)
+ 	set_interface_core 2 "eth0"
+ 	set_interface_core 4 "eth1" "xhci-hcd:usb3"
++	set_interface_core 1 "ff150000.i2c"
++	set_interface_core 8 "ff160000.i2c"
+ 	;;
+ embedfire,doornet2|\
+ friendlyarm,nanopi-r4s|\
+-- 
+2.30.1
+
