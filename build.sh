@@ -622,7 +622,7 @@ config server
 ' >smartdns/package/openwrt/files/etc/config/smartdns
 echo '
 
-speed-check-mode tcp:80,ping
+speed-check-mode ping,tcp:80,tcp:443
 ' >>smartdns/package/openwrt/custom.conf
 svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/luci-app-smartdns lean/luci-app-smartdns
 sed -i "s/..\/..\/luci.mk/\$(TOPDIR)\/feeds\/luci\/luci.mk/g" lean/luci-app-smartdns/Makefile
