@@ -9,13 +9,13 @@ OPENCLASH_ENABLE=$(cat /etc/config/openclash | grep -m 1 "option enable" | cut -
 if [ ${OPENCLASH_ENABLE} -eq 1 ]; then
   while [ $tries -lt 5 ]; do
     echo $DATE check $GITHUB start >>$LOG
-    NSLOOKUP=$(nslookup -port=${OPENCLASH_DNS_PORT} $GITHUB 127.0.0.1 2>/dev/null | grep -v grep | grep 'Address:' | wc -l)
+    NSLOOKUP=$(nslookup -port=${OPENCLASH_DNS_PORT} $GITHUB 127.0.0.1 2>/dev/null | grep -v grep | grep 'Name:' | wc -l)
     if [ ${NSLOOKUP} -ne 0 ]; then
       echo $DATE check openclash connect: OK >>$LOG
       exit 0
     else
       echo $DATE check $YOUTUBE start >>$LOG
-      NSLOOKUP=$(nslookup -port=${OPENCLASH_DNS_PORT} $YOUTUBE 127.0.0.1 2>/dev/null | grep -v grep | grep 'Address:' | wc -l)
+      NSLOOKUP=$(nslookup -port=${OPENCLASH_DNS_PORT} $YOUTUBE 127.0.0.1 2>/dev/null | grep -v grep | grep 'Name:' | wc -l)
       if [ ${NSLOOKUP} -ne 0 ]; then
         echo $DATE check openclash connect: OK >>$LOG
         exit 0
