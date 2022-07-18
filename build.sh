@@ -136,6 +136,11 @@ config openclash 'config'
 	option geoip_update_day_time '5'
 	option geoip_custom_url 'https://fastly.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat'
 	option dashboard_forward_ssl '0'
+	option enable_http3 '1'
+	option custom_domain_dns_server '127.0.0.1#6053'
+	option dashboard_type 'Meta'
+	option yacd_type 'Meta'
+	option append_default_dns '0'
 	option enable '1'
 	option config_reload '1'
 
@@ -144,112 +149,172 @@ config dns_servers
   option ip '8.8.8.8'
   option group 'fallback'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option type 'udp'
   option ip '8.8.4.4'
   option group 'fallback'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option type 'udp'
   option ip '1.1.1.1'
   option group 'fallback'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip '1.0.0.1'
   option type 'udp'
   option group 'fallback'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option type 'udp'
   option ip '4.2.2.1'
   option enabled '0'
   option group 'fallback'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option type 'udp'
   option ip '4.2.2.2'
   option enabled '0'
   option group 'fallback'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option type 'udp'
   option ip '119.29.29.29'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option type 'udp'
   option ip '119.28.28.28'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option type 'udp'
   option ip '223.5.5.5'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option type 'udp'
   option enabled '0'
   option ip '223.6.6.6'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip '8.8.8.8'
   option type 'tcp'
   option group 'fallback'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip '8.8.4.4'
   option type 'tcp'
   option group 'fallback'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip '1.1.1.1'
   option type 'tcp'
   option group 'fallback'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip '1.0.0.1'
   option type 'tcp'
   option group 'fallback'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip '4.2.2.1'
   option type 'tcp'
   option enabled '0'
   option group 'fallback'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip '4.2.2.2'
   option enabled '0'
   option type 'tcp'
   option group 'fallback'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option enabled '0'
   option ip '119.29.29.29'
   option type 'tcp'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option enabled '0'
   option ip '119.28.28.28'
   option type 'tcp'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option enabled '0'
   option ip '223.5.5.5'
   option type 'tcp'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option enabled '0'
   option ip '223.6.6.6'
   option type 'tcp'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip '8.8.8.8'
@@ -257,6 +322,9 @@ config dns_servers
 	option port '853'
   option group 'fallback'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip '8.8.4.4'
@@ -264,6 +332,9 @@ config dns_servers
 	option port '853'
   option enabled '0'
   option group 'fallback'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip '1.1.1.1'
@@ -271,6 +342,9 @@ config dns_servers
 	option port '853'
   option group 'fallback'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip '1.0.0.1'
@@ -278,52 +352,79 @@ config dns_servers
 	option port '853'
   option enabled '0'
   option group 'fallback'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip 'dns.pub'
 	option port '853'
   option type 'tls'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option enabled '0'
   option ip 'doh.pub'
 	option port '853'
   option type 'tls'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip '223.5.5.5'
   option type 'tls'
 	option port '853'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option enabled '0'
   option ip '223.6.6.6'
 	option port '853'
   option type 'tls'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip 'https://1.1.1.1/dns-query'
   option type 'https'
   option group 'fallback'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip 'https://8.8.8.8/dns-query'
   option type 'https'
   option group 'fallback'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip 'https://doh.pub/dns-query'
   option type 'https'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option ip 'https://223.5.5.5/dns-query'
   option type 'https'
   option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option enabled '1'
@@ -331,6 +432,9 @@ config dns_servers
   option ip '127.0.0.1'
   option port '6053'
   option type 'tcp'
+	option node_resolve '1'
+	option interface 'Disable'
+	option specific_group 'Disable'
 
 config dns_servers
   option enabled '1'
@@ -338,6 +442,9 @@ config dns_servers
   option port '7053'
   option group 'fallback'
   option type 'tcp'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
 ' >lean/luci-app-openclash/root/etc/config/openclash
 mkdir -p base-files/files/etc/openclash/core
 #curl -L https://github.com/vernesong/OpenClash/releases/download/TUN/clash-linux-${CPU_MODEL}.tar.gz | tar zxf -
