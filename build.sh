@@ -141,6 +141,7 @@ config openclash 'config'
 	option dashboard_type 'Meta'
 	option yacd_type 'Meta'
 	option append_default_dns '0'
+	option default_resolvfile '/tmp/resolv.conf.d/resolv.conf.auto'
 	option enable '1'
 	option config_reload '1'
 
