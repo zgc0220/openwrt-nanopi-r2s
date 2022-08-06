@@ -612,12 +612,12 @@ config server
   option type 'tcp'
 
 config server
-  option enabled '0'
+  option enabled '1'
   option ip '119.28.28.28'
   option type 'tcp'
 
 config server
-  option enabled '1'
+  option enabled '0'
   option ip '223.5.5.5'
   option type 'tcp'
 
@@ -673,7 +673,7 @@ config server
   option enabled '1'
 
 config server
-  option enabled '0'
+  option enabled '1'
   option ip 'doh.pub'
   option type 'tls'
   option no_check_certificate '0'
@@ -682,7 +682,7 @@ config server
   option ip '223.5.5.5'
   option type 'tls'
   option no_check_certificate '0'
-  option enabled '1'
+  option enabled '0'
   option host_name 'dns.alidns.com'
 
 config server
@@ -730,6 +730,7 @@ config server
 ' >smartdns/package/openwrt/files/etc/config/smartdns
 echo '
 
+response-mode first-ping
 speed-check-mode ping,tcp:80,tcp:443
 ' >>smartdns/package/openwrt/custom.conf
 svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/luci-app-smartdns lean/luci-app-smartdns
