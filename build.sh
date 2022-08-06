@@ -209,14 +209,6 @@ config dns_servers
 
 config dns_servers
   option type 'udp'
-  option ip '119.28.28.28'
-  option enabled '0'
-	option node_resolve '0'
-	option interface 'Disable'
-	option specific_group 'Disable'
-
-config dns_servers
-  option type 'udp'
   option ip '223.5.5.5'
   option enabled '0'
 	option node_resolve '0'
@@ -295,14 +287,6 @@ config dns_servers
 
 config dns_servers
   option enabled '0'
-  option ip '119.28.28.28'
-  option type 'tcp'
-	option node_resolve '0'
-	option interface 'Disable'
-	option specific_group 'Disable'
-
-config dns_servers
-  option enabled '0'
   option ip '223.5.5.5'
   option type 'tcp'
 	option node_resolve '0'
@@ -358,7 +342,7 @@ config dns_servers
 	option specific_group 'Disable'
 
 config dns_servers
-  option ip 'dns.pub'
+  option ip 'dot.pub'
 	option port '853'
   option type 'tls'
   option enabled '0'
@@ -368,7 +352,16 @@ config dns_servers
 
 config dns_servers
   option enabled '0'
-  option ip 'doh.pub'
+  option ip '1.12.12.12'
+	option port '853'
+  option type 'tls'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
+
+config dns_servers
+  option enabled '0'
+  option ip '120.53.53.53'
 	option port '853'
   option type 'tls'
 	option node_resolve '0'
@@ -420,7 +413,39 @@ config dns_servers
 	option specific_group 'Disable'
 
 config dns_servers
+  option ip 'https://sm2.doh.pub/dns-query'
+  option type 'https'
+  option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
+
+config dns_servers
+  option ip 'https://1.12.12.12/dns-query'
+  option type 'https'
+  option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
+
+config dns_servers
+  option ip 'https://120.53.53.53/dns-query'
+  option type 'https'
+  option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
+
+config dns_servers
   option ip 'https://223.5.5.5/dns-query'
+  option type 'https'
+  option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
+
+config dns_servers
+  option ip 'https://223.6.6.6/dns-query'
   option type 'https'
   option enabled '0'
 	option node_resolve '0'
@@ -545,11 +570,6 @@ config server
 
 config server
   option type 'udp'
-  option ip '119.28.28.28'
-  option enabled '0'
-
-config server
-  option type 'udp'
   option ip '223.5.5.5'
   option enabled '0'
 
@@ -612,11 +632,6 @@ config server
   option type 'tcp'
 
 config server
-  option enabled '1'
-  option ip '119.28.28.28'
-  option type 'tcp'
-
-config server
   option enabled '0'
   option ip '223.5.5.5'
   option type 'tcp'
@@ -667,16 +682,22 @@ config server
   option addition_arg '-exclude-default-group'
 
 config server
-  option ip 'dns.pub'
+  option ip 'dot.pub'
   option type 'tls'
   option no_check_certificate '0'
   option enabled '1'
 
 config server
-  option enabled '1'
-  option ip 'doh.pub'
+  option ip '1.12.12.12'
   option type 'tls'
   option no_check_certificate '0'
+  option enabled '1'
+
+config server
+  option ip '120.53.53.53'
+  option type 'tls'
+  option no_check_certificate '0'
+  option enabled '1'
 
 config server
   option ip '223.5.5.5'
@@ -721,7 +742,33 @@ config server
   option enabled '1'
 
 config server
+  option ip 'https://sm2.doh.pub/dns-query'
+  option type 'https'
+  option no_check_certificate '0'
+  option enabled '1'
+
+config server
+  option ip 'https://1.12.12.12/dns-query'
+  option type 'https'
+  option no_check_certificate '0'
+  option enabled '1'
+
+config server
+  option ip 'https://120.53.53.53/dns-query'
+  option type 'https'
+  option no_check_certificate '0'
+  option enabled '1'
+
+config server
   option ip 'https://223.5.5.5/dns-query'
+  option type 'https'
+  option no_check_certificate '0'
+  option enabled '1'
+  option host_name 'dns.alidns.com'
+  option http_host 'dns.alidns.com'
+
+config server
+  option ip 'https://223.6.6.6/dns-query'
   option type 'https'
   option no_check_certificate '0'
   option enabled '1'
