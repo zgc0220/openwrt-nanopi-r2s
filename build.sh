@@ -396,7 +396,25 @@ config dns_servers
 	option specific_group 'Disable'
 
 config dns_servers
+	option ip 'https://1.0.0.1/dns-query'
+	option type 'https'
+	option group 'fallback'
+	option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
+
+config dns_servers
 	option ip 'https://8.8.8.8/dns-query'
+	option type 'https'
+	option group 'fallback'
+	option enabled '0'
+	option node_resolve '0'
+	option interface 'Disable'
+	option specific_group 'Disable'
+
+config dns_servers
+	option ip 'https://8.8.4.4/dns-query'
 	option type 'https'
 	option group 'fallback'
 	option enabled '0'
@@ -697,7 +715,7 @@ config server
 	option ip '120.53.53.53'
 	option type 'tls'
 	option no_check_certificate '0'
-	option enabled '1'
+	option enabled '0'
 
 config server
 	option ip '223.5.5.5'
@@ -725,6 +743,17 @@ config server
 	option enabled '1'
 
 config server
+	option ip 'https://1.0.0.1/dns-query'
+	option type 'https'
+	option no_check_certificate '0'
+	option server_group 'foreign'
+	option blacklist_ip '0'
+	option host_name '1dot1dot1dot1.cloudflare-dns.com'
+	option http_host '1dot1dot1dot1.cloudflare-dns.com'
+	option addition_arg '-exclude-default-group'
+	option enabled '0'
+
+config server
 	option ip 'https://8.8.8.8/dns-query'
 	option type 'https'
 	option no_check_certificate '0'
@@ -736,6 +765,17 @@ config server
 	option enabled '1'
 
 config server
+	option ip 'https://8.8.4.4/dns-query'
+	option type 'https'
+	option no_check_certificate '0'
+	option server_group 'foreign'
+	option blacklist_ip '0'
+	option host_name 'dns.google'
+	option http_host 'dns.google'
+	option addition_arg '-exclude-default-group'
+	option enabled '0'
+
+config server
 	option ip 'https://doh.pub/dns-query'
 	option type 'https'
 	option no_check_certificate '0'
@@ -745,7 +785,7 @@ config server
 	option ip 'https://sm2.doh.pub/dns-query'
 	option type 'https'
 	option no_check_certificate '0'
-	option enabled '1'
+	option enabled '0'
 
 config server
 	option ip 'https://1.12.12.12/dns-query'
@@ -757,7 +797,7 @@ config server
 	option ip 'https://120.53.53.53/dns-query'
 	option type 'https'
 	option no_check_certificate '0'
-	option enabled '1'
+	option enabled '0'
 
 config server
 	option ip 'https://223.5.5.5/dns-query'
@@ -771,7 +811,7 @@ config server
 	option ip 'https://223.6.6.6/dns-query'
 	option type 'https'
 	option no_check_certificate '0'
-	option enabled '1'
+	option enabled '0'
 	option host_name 'dns.alidns.com'
 	option http_host 'dns.alidns.com'
 ' >smartdns/package/openwrt/files/etc/config/smartdns
