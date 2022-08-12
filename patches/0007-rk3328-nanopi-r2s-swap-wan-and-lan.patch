@@ -9,17 +9,18 @@ Signed-off-by: Chuck <fanck0605@qq.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/target/linux/rockchip/armv8/base-files/etc/board.d/02_network b/target/linux/rockchip/armv8/base-files/etc/board.d/02_network
-index 44eb3b4f1..38f448249 100755
+index 16530cea3..1e64cf841 100755
 --- a/target/linux/rockchip/armv8/base-files/etc/board.d/02_network
 +++ b/target/linux/rockchip/armv8/base-files/etc/board.d/02_network
-@@ -16,7 +16,7 @@ rockchip_setup_interfaces()
+@@ -17,7 +17,7 @@ rockchip_setup_interfaces()
  	sharevdi,guangmiao-g4c|\
  	xunlong,orangepi-r1-plus|\
  	xunlong,orangepi-r1-plus-lts)
 -		ucidef_set_interfaces_lan_wan 'eth1' 'eth0'
 +		ucidef_set_interfaces_lan_wan 'eth0' 'eth1'
  		;;
- 	*)
- 		ucidef_set_interface_lan 'eth0'
+ 	fastrhino,r66s|\
+ 	firefly,rk3568-roc-pc)
 --
-2.30.1
+2.37.1
+
