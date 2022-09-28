@@ -43,7 +43,7 @@ git clone --depth 1 https://github.com/NateLol/luci-app-oled.git lean/luci-app-o
 sed -i "s/option enable '0'/option enable '1'/g" lean/luci-app-oled/root/etc/config/oled
 # luci-app-openclash
 git clone --depth 1 -b dev https://github.com/vernesong/OpenClash.git
-CPU_MODEL=armv8
+CPU_MODEL=arm64
 mv OpenClash/luci-app-openclash lean
 echo '
 config openclash 'config'
