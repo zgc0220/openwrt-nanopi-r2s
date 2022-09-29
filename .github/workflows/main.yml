@@ -16,18 +16,26 @@ on:
     types: [started]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-20.04
-    if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
+      - name: Set timezone
+        uses: szenius/set-timezone@v1.0
+        with:
+          timezoneLinux: "Asia/Shanghai"
+          timezoneMacos: "Asia/Shanghai"
+          timezoneWindows: "China Standard Time"
 
       - name: Checkout Project
         uses: actions/checkout@v2
         with:
           ref: openwrt-lean
+
+      - name: Show large directories
+        run: |
+          df -h
+          sudo du -xh --exclude=/{proc,sys,dev} / | grep -E '^[0-9.]*?[GTPEZY]'
 
       - name: Initialize Environment
         env:
