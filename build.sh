@@ -817,6 +817,7 @@ config server
 ' >smartdns/package/openwrt/files/etc/config/smartdns
 echo '
 
+force-qtype-SOA 65
 response-mode first-ping
 speed-check-mode ping,tcp:80,tcp:443
 ' >>smartdns/package/openwrt/custom.conf
