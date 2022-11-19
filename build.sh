@@ -5,6 +5,9 @@ set -eu
 rm -rf openwrt
 git clone https://github.com/coolsnowwolf/lede.git openwrt
 
+Arch="arm64"
+CPU_MODEL="${Arch}"
+
 # customize patches
 pushd openwrt
 git show -s --format=%h
@@ -43,7 +46,6 @@ git clone --depth 1 https://github.com/NateLol/luci-app-oled.git lean/luci-app-o
 sed -i "s/option enable '0'/option enable '1'/g" lean/luci-app-oled/root/etc/config/oled
 # luci-app-openclash
 git clone --depth 1 -b dev https://github.com/vernesong/OpenClash.git
-CPU_MODEL=arm64
 mv OpenClash/luci-app-openclash lean
 echo '
 config openclash 'config'
@@ -843,10 +845,9 @@ sed -i "s/\$(TOPDIR)\/luci.mk/\$(TOPDIR)\/feeds\/luci\/luci.mk/g" lean/luci-app-
 #sed -i "s/PKG_CONFIG_DEPENDS:= CONFIG_PACKAGE_\$(PKG_NAME)_INCLUDE_binary//g" lean/luci-app-adguardhome/Makefile
 #svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/adguardhome lean/adguardhome
 #sed -i "s/..\/..\/lang\/golang\/golang-package.mk/\$(TOPDIR)\/feeds\/packages\/lang\/golang\/golang-package.mk/g" lean/adguardhome/Makefile
-Arch="arm64"
 latest_ver="$(curl https://api.github.com/repos/AdguardTeam/AdGuardHome/releases/latest 2>/dev/null|grep -E 'tag_name' |grep -E 'v[0-9.]+' -o 2>/dev/null)"
 curl -L https://github.com/AdguardTeam/AdGuardHome/releases/download/${latest_ver}/AdGuardHome_linux_${Arch}.tar.gz | tar zxf -
-mkdir -p base-files/files/usr/bin
+mkdir -p base-files/files/usr/bin/AdGuardHome
 mv AdGuardHome/AdGuardHome base-files/files/usr/bin/AdGuardHome
 rm -rf AdGuardHome
 echo '
