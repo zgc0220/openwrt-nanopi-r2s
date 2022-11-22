@@ -7,13 +7,7 @@
 name: openwrt-lean
 
 on:
-  push:
-    branches:
-      - openwrt-lean
-  schedule:
-    - cron: '00 18 * * *'
-  watch:
-    types: [started]
+  repository_dispatch:
 
 jobs:
   build:
